@@ -1,7 +1,3 @@
-// addEventListener for 3 new grids
-// in css display: none or something like that so that when newDivs are created the old disapers, or make an event insde btn that deletes it
-// loop with class all, recreate the original elements with loop, put them in function that is invoked in global scope, and then revoked in EventListener
-
 const mainDiv = document.querySelector('.container');
 const mainSpanBtn = document.querySelector('.btn');
 
@@ -12,4 +8,36 @@ function startingGrid(num) {
     newDiv.classList.add('startGrid');
   }
 }
-startingGrid(16);
+
+// 4x4 as default grid
+// startingGrid(16);
+
+// 6x6 grid
+function firstGrid(num) {
+  for (let i = 0; i < num; i++) {
+    let newDiv = document.createElement('div');
+    mainDiv.appendChild(newDiv);
+    newDiv.classList.add('firstGrid');
+  }
+}
+
+// firstGrid(36);
+
+// 8x8 grid
+function secondGrid(num) {
+  for (let i = 0; i < num; i++) {
+    let newDiv = document.createElement('div');
+    mainDiv.appendChild(newDiv);
+    newDiv.classList.add('secondGrid');
+  }
+}
+// secondGrid(64);
+
+function thirdGrid(num) {
+  for (let i = 0; i < num; i++) {
+    let newDiv = document.createElement('div');
+    mainDiv.appendChild(newDiv);
+    newDiv.classList.add('thirdGrid');
+  }
+}
+// thirdGrid(100);
