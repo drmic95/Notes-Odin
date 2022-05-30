@@ -1,6 +1,39 @@
 .container {
-  width: 1000px;
-  height: 1000px;
+  width: 95vw;
+  height: 95vh;
+  border: 5px solid black;
+  display: none;
+  flex-direction: row;
+  justify-content: stretch;
+  align-items: stretch;
+  align-content: stretch;
+  flex-wrap: wrap;
+}
+.container1 {
+  width: 95vw;
+  height: 95vh;
+  border: 5px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+  align-items: stretch;
+  align-content: stretch;
+  flex-wrap: wrap;
+}
+.container2 {
+  width: 95vw;
+  height: 95vh;
+  border: 5px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+  align-items: stretch;
+  align-content: stretch;
+  flex-wrap: wrap;
+}
+.container3 {
+  width: 95vw;
+  height: 95vh;
   border: 5px solid black;
   display: flex;
   flex-direction: row;
@@ -10,13 +43,13 @@
   flex-wrap: wrap;
 }
 
-.startGrid {
+.grid_zero {
   border: 2px solid black;
   min-height: 20%;
   min-width: 20%;
   flex: auto;
 }
-.startGrid:hover {
+.grid_zero:hover {
   background-color: brown;
   transition: all 0.5s ease-in-out;
 }
@@ -52,4 +85,10 @@
 .thirdGrid:hover {
   background-color: brown;
   transition: all 0.5s ease-in-out;
+}
+
+.reset {
+  position: absolute;
+  right: 20%;
+  font-weight: bolder;
 }
