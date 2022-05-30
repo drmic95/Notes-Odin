@@ -1,25 +1,22 @@
 'use strict';
 // containers selected
-const mainDiv = document.querySelector('.container');
+
 const mainDiv1 = document.querySelector('.container1');
 const mainDiv2 = document.querySelector('.container2');
 const mainDiv3 = document.querySelector('.container3');
+const mainDiv4 = document.querySelector('.container4');
+const mainDiv5 = document.querySelector('.container5');
 
 const mainSpanBtn = document.querySelector('.btn');
 const reset = document.querySelector('.reset');
 
 // btn selected
-const btnZero = document.querySelector('.grid_zero');
 const btnFirst = document.querySelector('.first_grid');
 const btnSecond = document.querySelector('.second_grid');
 const btnThird = document.querySelector('.third_grid');
+const btnFourth = document.querySelector('.fourth_grid');
+const btnFifth = document.querySelector('.fifth_grid');
 
-// all children created
-for (let i = 0; i < 16; i++) {
-  let newDiv = document.createElement('div');
-  mainDiv.appendChild(newDiv);
-  newDiv.classList.add('gridZero');
-}
 for (let i = 0; i < 36; i++) {
   let newDiv1 = document.createElement('div');
   mainDiv1.appendChild(newDiv1);
@@ -35,36 +32,70 @@ for (let i = 0; i < 100; i++) {
   mainDiv3.appendChild(newDiv3);
   newDiv3.classList.add('thirdGrid');
 }
+for (let i = 0; i < 225; i++) {
+  let newDiv4 = document.createElement('div');
+  mainDiv4.appendChild(newDiv4);
+  newDiv4.classList.add('fourthGrid');
+}
+for (let i = 0; i < 400; i++) {
+  let newDiv5 = document.createElement('div');
+  mainDiv5.appendChild(newDiv5);
+  newDiv5.classList.add('fifthGrid');
+}
 
 // containers js default
-mainDiv.style.display = 'none';
 mainDiv1.style.display = 'none';
 mainDiv2.style.display = 'none';
 mainDiv3.style.display = 'none';
+mainDiv4.style.display = 'none';
+mainDiv5.style.display = 'none';
 
 // btn listeners
 btnFirst.addEventListener('click', function () {
   mainDiv1.style.display = 'flex';
-  mainDiv.style.display = 'none';
+  mainDiv4.style.display = 'none';
+  mainDiv5.style.display = 'none';
+
   mainDiv2.style.display = 'none';
   mainDiv3.style.display = 'none';
 });
 btnSecond.addEventListener('click', function () {
   mainDiv2.style.display = 'flex';
-  mainDiv.style.display = 'none';
+  mainDiv4.style.display = 'none';
+  mainDiv5.style.display = 'none';
+
   mainDiv1.style.display = 'none';
   mainDiv3.style.display = 'none';
 });
 btnThird.addEventListener('click', function () {
   mainDiv3.style.display = 'flex';
-  mainDiv.style.display = 'none';
+  mainDiv4.style.display = 'none';
+  mainDiv5.style.display = 'none';
+
   mainDiv1.style.display = 'none';
   mainDiv2.style.display = 'none';
 });
 
-reset.addEventListener('click', function () {
-  mainDiv.style.display = 'none';
+btnFourth.addEventListener('click', function () {
   mainDiv1.style.display = 'none';
   mainDiv2.style.display = 'none';
   mainDiv3.style.display = 'none';
+  mainDiv4.style.display = 'flex';
+  mainDiv5.style.display = 'none';
+});
+
+btnFifth.addEventListener('click', function () {
+  mainDiv1.style.display = 'none';
+  mainDiv2.style.display = 'none';
+  mainDiv3.style.display = 'none';
+  mainDiv4.style.display = 'none';
+  mainDiv5.style.display = 'flex';
+});
+
+reset.addEventListener('click', function () {
+  mainDiv1.style.display = 'none';
+  mainDiv2.style.display = 'none';
+  mainDiv3.style.display = 'none';
+  mainDiv4.style.display = 'none';
+  mainDiv5.style.display = 'none';
 });
