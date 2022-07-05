@@ -43,19 +43,20 @@ for (let i = 0; i < 400; i++) {
   newDiv5.classList.add('fifthGrid');
 }
 
-// containers js default
-mainDiv1.style.display = 'none';
-mainDiv2.style.display = 'none';
-mainDiv3.style.display = 'none';
-mainDiv4.style.display = 'none';
-mainDiv5.style.display = 'none';
+const defaultState = () => {
+  mainDiv1.style.display = 'none';
+  mainDiv2.style.display = 'none';
+  mainDiv3.style.display = 'none';
+  mainDiv4.style.display = 'none';
+  mainDiv5.style.display = 'none';
+};
+defaultState();
 
 // btn listeners
 btnFirst.addEventListener('click', function () {
   mainDiv1.style.display = 'flex';
   mainDiv4.style.display = 'none';
   mainDiv5.style.display = 'none';
-
   mainDiv2.style.display = 'none';
   mainDiv3.style.display = 'none';
 });
@@ -63,7 +64,6 @@ btnSecond.addEventListener('click', function () {
   mainDiv2.style.display = 'flex';
   mainDiv4.style.display = 'none';
   mainDiv5.style.display = 'none';
-
   mainDiv1.style.display = 'none';
   mainDiv3.style.display = 'none';
 });
@@ -92,10 +92,4 @@ btnFifth.addEventListener('click', function () {
   mainDiv5.style.display = 'flex';
 });
 
-reset.addEventListener('click', function () {
-  mainDiv1.style.display = 'none';
-  mainDiv2.style.display = 'none';
-  mainDiv3.style.display = 'none';
-  mainDiv4.style.display = 'none';
-  mainDiv5.style.display = 'none';
-});
+reset.addEventListener('click', defaultState);

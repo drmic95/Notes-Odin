@@ -1,47 +1,7 @@
-.container1 {
-  width: 95vw;
-  height: 95vh;
-  border: 5px solid black;
-  display: flex;
-  flex-direction: row;
-  justify-content: stretch;
-  align-items: stretch;
-  align-content: stretch;
-  flex-wrap: wrap;
-}
-.container2 {
-  width: 95vw;
-  height: 95vh;
-  border: 5px solid black;
-  display: flex;
-  flex-direction: row;
-  justify-content: stretch;
-  align-items: stretch;
-  align-content: stretch;
-  flex-wrap: wrap;
-}
-.container3 {
-  width: 95vw;
-  height: 95vh;
-  border: 5px solid black;
-  display: flex;
-  flex-direction: row;
-  justify-content: stretch;
-  align-items: stretch;
-  align-content: stretch;
-  flex-wrap: wrap;
-}
-.container4 {
-  width: 95vw;
-  height: 95vh;
-  border: 5px solid black;
-  display: flex;
-  flex-direction: row;
-  justify-content: stretch;
-  align-items: stretch;
-  align-content: stretch;
-  flex-wrap: wrap;
-}
+.container1,
+.container2,
+.container3,
+.container4,
 .container5 {
   width: 95vw;
   height: 95vh;
@@ -53,6 +13,7 @@
   align-content: stretch;
   flex-wrap: wrap;
 }
+
 .firstGrid {
   border: 2px solid black;
   min-height: 10%;
@@ -104,8 +65,8 @@
 
 .fifthGrid {
   border: 2px solid black;
-  min-height: 2%;
   min-width: 3.5%;
+  min-height: 2.5%;
   flex: auto;
 }
 .fifthGrid:hover {
