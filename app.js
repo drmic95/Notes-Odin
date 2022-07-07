@@ -10,13 +10,6 @@ const mainDiv5 = document.querySelector('.container5');
 const mainSpanBtn = document.querySelector('.btn');
 const reset = document.querySelector('.reset');
 
-// btn selected
-const btnFirst = document.querySelector('.first_grid');
-const btnSecond = document.querySelector('.second_grid');
-const btnThird = document.querySelector('.third_grid');
-const btnFourth = document.querySelector('.fourth_grid');
-const btnFifth = document.querySelector('.fifth_grid');
-
 for (let i = 0; i < 36; i++) {
   let newDiv1 = document.createElement('div');
   mainDiv1.appendChild(newDiv1);
@@ -53,43 +46,27 @@ const defaultState = () => {
 defaultState();
 
 // btn listeners
-btnFirst.addEventListener('click', function () {
-  mainDiv1.style.display = 'flex';
-  mainDiv4.style.display = 'none';
-  mainDiv5.style.display = 'none';
-  mainDiv2.style.display = 'none';
-  mainDiv3.style.display = 'none';
-});
-btnSecond.addEventListener('click', function () {
-  mainDiv2.style.display = 'flex';
-  mainDiv4.style.display = 'none';
-  mainDiv5.style.display = 'none';
-  mainDiv1.style.display = 'none';
-  mainDiv3.style.display = 'none';
-});
-btnThird.addEventListener('click', function () {
-  mainDiv3.style.display = 'flex';
-  mainDiv4.style.display = 'none';
-  mainDiv5.style.display = 'none';
 
-  mainDiv1.style.display = 'none';
-  mainDiv2.style.display = 'none';
-});
+mainSpanBtn.addEventListener('click', (e) => {
+  const btnFirst = e.target.classList.contains('first_grid');
+  const btnSecond = e.target.classList.contains('second_grid');
+  const btnThird = e.target.classList.contains('third_grid');
+  const btnFourth = e.target.classList.contains('fourth_grid');
+  const btnFifth = e.target.classList.contains('fifth_grid');
 
-btnFourth.addEventListener('click', function () {
-  mainDiv1.style.display = 'none';
-  mainDiv2.style.display = 'none';
-  mainDiv3.style.display = 'none';
-  mainDiv4.style.display = 'flex';
-  mainDiv5.style.display = 'none';
-});
+  defaultState();
 
-btnFifth.addEventListener('click', function () {
-  mainDiv1.style.display = 'none';
-  mainDiv2.style.display = 'none';
-  mainDiv3.style.display = 'none';
-  mainDiv4.style.display = 'none';
-  mainDiv5.style.display = 'flex';
+  if (btnFirst) {
+    mainDiv1.style.display = 'flex';
+  } else if (btnSecond) {
+    mainDiv2.style.display = 'flex';
+  } else if (btnThird) {
+    mainDiv3.style.display = 'flex';
+  } else if (btnFourth) {
+    mainDiv4.style.display = 'flex';
+  } else if (btnFifth) {
+    mainDiv5.style.display = 'flex';
+  }
 });
 
 reset.addEventListener('click', defaultState);
