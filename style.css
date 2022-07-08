@@ -1,3 +1,9 @@
+body {
+  --item_border: 2px solid black;
+  --item_transition: all 0.5s ease-in-out;
+  --item_bacColor: yellow;
+}
+
 .container1,
 .container2,
 .container3,
@@ -15,47 +21,47 @@
 }
 
 .firstGrid {
-  border: 2px solid black;
+  border: var(--item_border);
   min-height: 10%;
   min-width: 15%;
   flex: auto;
 }
 .firstGrid:hover {
-  background-color: brown;
-  transition: all 0.5s ease-in-out;
+  background-color: var(--item_bacColor);
+  transition: var(--item_transition);
 }
 
 .secondGrid {
-  border: 2px solid black;
+  border: var(--item_border);
   min-height: 8%;
   min-width: 12%;
   flex: auto;
 }
 .secondGrid:hover {
-  background-color: brown;
-  transition: all 0.5s ease-in-out;
+  background-color: var(--item_bacColor);
+  transition: var(--item_transition);
 }
 
 .thirdGrid {
-  border: 2px solid black;
+  border: var(--item_border);
   min-height: 6%;
   min-width: 9%;
   flex: auto;
 }
 .thirdGrid:hover {
-  background-color: brown;
-  transition: all 0.5s ease-in-out;
+  background-color: var(--item_bacColor);
+  transition: var(--item_transition);
 }
 
 .fourthGrid {
-  border: 2px solid black;
+  border: var(--item_border);
   min-height: 4%;
   min-width: 6%;
   flex: auto;
 }
 .fourthGrid:hover {
-  background-color: brown;
-  transition: all 0.5s ease-in-out;
+  background-color: var(--item_bacColor);
+  transition: var(--item_transition);
 }
 .reset {
   position: absolute;
@@ -64,12 +70,12 @@
 }
 
 .fifthGrid {
-  border: 2px solid black;
+  border: var(--item_border);
   min-width: 3.5%;
   min-height: 2.5%;
   flex: auto;
 }
 .fifthGrid:hover {
-  background-color: brown;
-  transition: all 0.5s ease-in-out;
+  background-color: var(--item_bacColor);
+  transition: var(--item_transition);
 }

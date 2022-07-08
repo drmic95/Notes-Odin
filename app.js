@@ -1,5 +1,4 @@
 'use strict';
-// containers selected
 
 const mainDiv1 = document.querySelector('.container1');
 const mainDiv2 = document.querySelector('.container2');
@@ -10,6 +9,7 @@ const mainDiv5 = document.querySelector('.container5');
 const mainSpanBtn = document.querySelector('.btn');
 const reset = document.querySelector('.reset');
 
+// all flex grids created
 for (let i = 0; i < 36; i++) {
   let newDiv1 = document.createElement('div');
   mainDiv1.appendChild(newDiv1);
@@ -44,8 +44,6 @@ const defaultState = () => {
   mainDiv5.style.display = 'none';
 };
 defaultState();
-
-// btn listeners
 
 mainSpanBtn.addEventListener('click', (e) => {
   const btnFirst = e.target.classList.contains('first_grid');
